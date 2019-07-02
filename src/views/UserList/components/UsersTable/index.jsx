@@ -24,10 +24,10 @@ import {
 } from '@material-ui/core';
 
 // Shared helpers
-import { getInitials } from 'helpers';
+import { getInitials } from '../../../../helpers';
 
 // Shared components
-import { Portlet, PortletContent } from 'components';
+import { Portlet, PortletContent } from '../../../../components';
 
 // Component styles
 import styles from './styles';

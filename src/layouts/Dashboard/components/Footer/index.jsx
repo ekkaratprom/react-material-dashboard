@@ -50,4 +50,6 @@ Footer.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Footer);
+let newStyles;
+[Footer, newStyles] = require('../../../../common/customizers').customizers.customizeComponent('Footer', Footer, styles);
+export default withStyles(newStyles)(Footer);

@@ -26,10 +26,10 @@ import {
   PortletLabel,
   PortletToolbar,
   PortletContent
-} from 'components';
+} from '../../../../components';
 
 // Palette
-import palette from 'theme/palette';
+import palette from '../../../../theme/palette';
 
 // Chart configuration
 import { data, options } from './chart';

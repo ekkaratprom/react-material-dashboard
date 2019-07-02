@@ -27,7 +27,7 @@ import {
 } from '@material-ui/icons';
 
 // Shared services
-import { getNotifications } from 'services/notification';
+import { getNotifications } from '../../../../services/notification';
 
 // Custom components
 import { NotificationList } from './components';
@@ -178,7 +178,10 @@ Topbar.defaultProps = {
   onToggleSidebar: () => {}
 };
 
+let newStyles;
+[Topbar, newStyles] = require('../../../../common/customizers').customizers.customizeComponent('Topbar', Topbar, styles);
+
 export default compose(
   withRouter,
-  withStyles(styles)
+  withStyles(newStyles)
 )(Topbar);

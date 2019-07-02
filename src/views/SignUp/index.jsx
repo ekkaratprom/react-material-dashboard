@@ -25,7 +25,7 @@ import {
 import { ArrowBack as ArrowBackIcon } from '@material-ui/icons';
 
 // Shared utilities
-import validators from 'common/validators';
+import validators from '../../common/validators';
 
 // Component styles
 import styles from './styles';
@@ -366,7 +366,9 @@ SignUp.propTypes = {
   history: PropTypes.object.isRequired
 };
 
+let newStyles;
+[SignUp, newStyles] = require('../../common/customizers').customizers.customizeComponent('SignUp', SignUp, styles);
 export default compose(
   withRouter,
-  withStyles(styles)
+  withStyles(newStyles)
 )(SignUp);

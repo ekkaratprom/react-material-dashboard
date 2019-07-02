@@ -11,7 +11,7 @@ import { withStyles } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 
 // Shared components
-import { DisplayMode, SearchInput } from 'components';
+import { DisplayMode, SearchInput } from '../../../../components';
 
 // Component styles
 import styles from './styles';

@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core';
 import { Grid, Typography as TypographyComponent } from '@material-ui/core';
 
 // Shared layouts
-import { Dashboard as DashboardLayout } from 'layouts';
+import { Dashboard as DashboardLayout } from '../../layouts';
 
 // Component styles
 const styles = theme => ({

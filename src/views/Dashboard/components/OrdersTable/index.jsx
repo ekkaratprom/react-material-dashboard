@@ -23,7 +23,7 @@ import {
 } from '@material-ui/core';
 
 // Shared services
-import { getOrders } from 'services/order';
+import { getOrders } from '../../../../services/order';
 
 // Shared components
 import {
@@ -33,7 +33,7 @@ import {
   PortletToolbar,
   PortletContent,
   Status
-} from 'components';
+} from '../../../../components';
 
 // Component styles
 import styles from './styles';

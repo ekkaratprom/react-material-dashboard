@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 
 // Shared layouts
-import { Dashboard as DashboardLayout } from 'layouts';
+import { Dashboard as DashboardLayout } from '../../layouts';
 
 // Custom components
 import {
@@ -128,4 +128,6 @@ Dashboard.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Dashboard);
+let newStyles;
+[Dashboard, newStyles] = require('../../common/customizers').customizers.customizeComponent('Dashboard', Dashboard, styles);
+export default withStyles(newStyles)(Dashboard);

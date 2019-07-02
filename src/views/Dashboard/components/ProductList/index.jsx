@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 // Shared services
-import { getProducts } from 'services/product';
+import { getProducts } from '../../../../services/product';
 
 // Material helpers
 import { withStyles } from '@material-ui/core';
@@ -32,7 +32,7 @@ import {
   PortletLabel,
   PortletContent,
   PortletFooter
-} from 'components';
+} from '../../../../components';
 
 // Component styles
 import styles from './styles';

@@ -24,7 +24,7 @@ import {
 import { ArrowBack as ArrowBackIcon } from '@material-ui/icons';
 
 // Shared components
-import { Facebook as FacebookIcon, Google as GoogleIcon } from 'icons';
+import { Facebook as FacebookIcon, Google as GoogleIcon } from '../../icons';
 
 // Component styles
 import styles from './styles';
@@ -303,7 +303,9 @@ SignIn.propTypes = {
   history: PropTypes.object.isRequired
 };
 
+let newStyles;
+[SignIn, newStyles] = require('../../common/customizers').customizers.customizeComponent('SignIn', SignIn, styles);
 export default compose(
   withRouter,
-  withStyles(styles)
+  withStyles(newStyles)
 )(SignIn);

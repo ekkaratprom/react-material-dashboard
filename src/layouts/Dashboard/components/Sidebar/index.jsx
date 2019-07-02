@@ -231,4 +231,6 @@ Sidebar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Sidebar);
+let newStyles;
+[Sidebar, newStyles] = require('../../../../common/customizers').customizers.customizeComponent('Sidebar', Sidebar, styles);
+export default withStyles(newStyles)(Sidebar);

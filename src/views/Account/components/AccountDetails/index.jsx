@@ -17,7 +17,7 @@ import {
   PortletLabel,
   PortletContent,
   PortletFooter
-} from 'components';
+} from '../../../../components';
 
 // Component styles
 import styles from './styles';

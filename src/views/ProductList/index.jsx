@@ -22,10 +22,10 @@ import {
 } from '@material-ui/icons';
 
 // Shared layouts
-import { Dashboard as DashboardLayout } from 'layouts';
+import { Dashboard as DashboardLayout } from '../../layouts';
 
 // Shared services
-import { getProducts } from 'services/product';
+import { getProducts } from '../../services/product';
 
 // Custom components
 import { ProductsToolbar, ProductCard } from './components';
