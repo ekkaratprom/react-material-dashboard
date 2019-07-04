@@ -18,7 +18,7 @@ import { AccountProfile, AccountDetails } from './components';
 // Component styles
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 4
+    padding: theme.spacing(4)
   }
 });
 
@@ -64,4 +64,6 @@ Account.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Account);
+let newStyles;
+[Account, newStyles] = require('../../common/customizers').customizers.customizeComponent('Account', Account, styles);
+export default withStyles(newStyles)(Account);

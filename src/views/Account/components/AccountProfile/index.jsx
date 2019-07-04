@@ -77,4 +77,6 @@ AccountProfile.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(AccountProfile);
+let newStyles;
+[AccountProfile, newStyles] = require('../../../../common/customizers').customizers.customizeComponent('AccountProfile', AccountProfile, styles);
+export default withStyles(newStyles)(AccountProfile);

@@ -161,4 +161,6 @@ Account.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Account);
+let newStyles;
+[Account, newStyles] = require('../../../../common/customizers').customizers.customizeComponent('Account', Account, styles);
+export default withStyles(newStyles)(Account);

@@ -188,22 +188,13 @@ class SignIn extends Component {
                   >
                     Sign in with social media
                   </Typography>
-                  <Button
-                    className={classes.facebookButton}
-                    color="primary"
-                    onClick={this.handleSignIn}
-                    size="large"
-                    variant="contained"
+                  <Button className={classes.facebookButton} color="primary"
+                    onClick={this.handleSignIn} size="large" variant="contained"
                   >
                     <FacebookIcon className={classes.facebookIcon} />
                     Login with Facebook
                   </Button>
-                  <Button
-                    className={classes.googleButton}
-                    onClick={this.handleSignIn}
-                    size="large"
-                    variant="contained"
-                  >
+                  <Button className={classes.googleButton} onClick={this.handleSignIn} size="large" variant="contained">
                     <GoogleIcon className={classes.googleIcon} />
                     Login with Google
                   </Button>
@@ -214,76 +205,39 @@ class SignIn extends Component {
                     or login with email address
                   </Typography>
                   <div className={classes.fields}>
-                    <TextField
-                      className={classes.textField}
-                      label="Email address"
-                      name="email"
-                      onChange={event =>
-                        this.handleFieldChange('email', event.target.value)
-                      }
-                      type="text"
-                      value={values.email}
-                      variant="outlined"
-                    />
+                    <TextField className={classes.textField} label="Email address" name="email"
+                      onChange={event => this.handleFieldChange('email', event.target.value)}
+                      type="text" value={values.email} variant="outlined"/>
                     {showEmailError && (
-                      <Typography
-                        className={classes.fieldError}
-                        variant="body2"
-                      >
+                      <Typography className={classes.fieldError} variant="body2">
                         {errors.email[0]}
                       </Typography>
                     )}
-                    <TextField
-                      className={classes.textField}
-                      label="Password"
-                      name="password"
-                      onChange={event =>
-                        this.handleFieldChange('password', event.target.value)
-                      }
-                      type="password"
-                      value={values.password}
-                      variant="outlined"
-                    />
+                    <TextField className={classes.textField} label="Password" name="password"
+                      onChange={event => this.handleFieldChange('password', event.target.value)}
+                      type="password" value={values.password} variant="outlined"/>
                     {showPasswordError && (
-                      <Typography
-                        className={classes.fieldError}
-                        variant="body2"
-                      >
+                      <Typography className={classes.fieldError} variant="body2">
                         {errors.password[0]}
                       </Typography>
                     )}
                   </div>
                   {submitError && (
-                    <Typography
-                      className={classes.submitError}
-                      variant="body2"
-                    >
+                    <Typography className={classes.submitError} variant="body2">
                       {submitError}
                     </Typography>
                   )}
                   {isLoading ? (
                     <CircularProgress className={classes.progress} />
                   ) : (
-                    <Button
-                      className={classes.signInButton}
-                      color="primary"
-                      disabled={!isValid}
-                      onClick={this.handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
+                    <Button className={classes.signInButton} color="primary"
+                      disabled={!isValid} onClick={this.handleSignIn} size="large" variant="contained">
                       Sign in now
                     </Button>
                   )}
-                  <Typography
-                    className={classes.signUp}
-                    variant="body1"
-                  >
+                  <Typography className={classes.signUp} variant="body1">
                     Don't have an account?{' '}
-                    <Link
-                      className={classes.signUpUrl}
-                      to="/sign-up"
-                    >
+                    <Link className={classes.signUpUrl} to="/sign-up">
                       Sign up
                     </Link>
                   </Typography>
