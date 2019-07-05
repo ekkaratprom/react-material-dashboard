@@ -18,7 +18,7 @@ import { Notifications, Password } from './components';
 // Component styles
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 4
+    padding: theme.spacing(4)
   }
 });
 
@@ -58,4 +58,6 @@ Settings.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Settings);
+let newStyles;
+[Settings, newStyles] = require('../../common/customizers').customizers.customizeComponent('Settings', Settings, styles);
+export default withStyles(newStyles)(Settings);
