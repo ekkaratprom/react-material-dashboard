@@ -99,4 +99,6 @@ Password.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Password);
+let newStyles;
+[Password, newStyles] = require('../../../../common/customizers').customizers.customizeComponent('Password', Password, styles);
+export default withStyles(newStyles)(Password);
